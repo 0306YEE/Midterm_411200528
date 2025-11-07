@@ -69,7 +69,7 @@ def delete_student():
     curson.execute('SELECT = from DB_student where db_student_id =?' , (student_id,))
     delete = cursor.fetchall()
     cursor.execute('Delete from DB_student where db_student_id =?', (student_id,))
-    print('Following row is delete:' , delete)
+    print('Following rows are delete:' , delete)
     conn.commit()
 
 botton_remove = tk.Button(root, text='remove', command=overview_student)
